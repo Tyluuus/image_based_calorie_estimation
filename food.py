@@ -76,7 +76,7 @@ class FoodDataset(utils.Dataset):
         	self.add_class("food", n+1,i )
 
         # Train or validation dataset?
-        assert subset in ["train", "val"]
+        assert subset in ["train", "val", 'test']
         dataset_dir = os.path.join(dataset_dir, subset)
         annotations = json.load(open(os.path.join(dataset_dir, "annotation.json")))
         # Add images
